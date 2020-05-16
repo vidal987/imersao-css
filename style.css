@@ -1,0 +1,242 @@
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Code Pro', monospace;
+*/
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background:#a9a9a9;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+@media (min-width:400px) {
+  body{
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 600px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1200px) {
+  body{
+    font-size: 20px;
+  }
+
+}
+
+header {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu li {
+  list-style: none;
+}
+.menu ul {
+  display: flex;
+  justify-content: right;
+  padding-right: 1em;
+  height: 10vh;
+  align-items: center; 
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; 
+}
+
+
+@media(max-width: 375px) {
+  .menu ul {
+    justify-content: center;
+  }
+}
+
+.menu a{
+  display: block;
+  padding: 10px 20px;
+  border-top-left-radius: 50px ;
+  border-bottom-right-radius: 50px ;
+  transition: background-color 800ms, color 100ms;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: #a9a9a9;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: #7e7b7b;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+header {
+  height: 100vh;
+}
+
+.site-subtitle,
+.site-title {
+  text-align: center;
+  color: black;
+}
+
+.site-title {
+  font-size: 4em ;
+  font-family: 'Source Code Pro', monospace;
+}
+.site-subtitle{
+  line-height: 1.4em;
+}
+
+.sobre p {
+  color: #7e7b7b;
+  margin-bottom: 1.4em;
+  text-indent: 2em;
+  text-align: justify;
+  
+}
+.sobre .avatar img {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+@media (min-width:375px) {
+  .sobre .avatar  {
+    float: right;
+    
+
+    
+  }
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 1.2em;
+}
+
+.sobre,
+.contato ,
+.portifolio{
+  padding: 2em;
+  min-height: 100vh;
+  background-color: black;
+  
+}
+
+@media(min-width: 1200px) {
+  .sobre,
+  .contato ,
+  .portifolio{
+    max-width: auto;
+  }
+}
+
+.contato h2{
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
+  margin-top: 4em;
+  margin-bottom: 1em; 
+  font-size: 2em;
+  text-align: center;
+}
+
+.sobre h2,
+.portifolio h2 {
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
+  margin-top: 1em;
+  margin-bottom: 1em; 
+  font-size: 2em;
+  text-align: center;
+}
+
+.portifolio .grid {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .portifolio .grid {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 850px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em - 48px);
+    gap: 2em;
+  }
+}
+
+.portifolio figure  {
+  text-align: center;
+}
+
+.portifolio figcaption {
+  margin-top: 1.2em;
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.2);
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 500ms;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 50px rgba(253, 242, 242, 0.5);
+}
+
+.contato .icons{
+
+  text-align: center;
+}
+
+@media (min-width:600px) {
+  .contato a{
+    justify-content: center;
+    align-content: center;
+    font-size: 6em;
+  }
+}
